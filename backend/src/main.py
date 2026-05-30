@@ -3,7 +3,14 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
+
+# Windows 默认 GBK 编码，第三方库打印 emoji 时会崩溃
+os.environ.setdefault("PYTHONUTF8", "1")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
 from typing import Any, Dict, Iterator, Optional
 
 from fastapi import FastAPI, HTTPException

@@ -36,7 +36,7 @@ helloagents-deepresearch/
 │   │   ├── prompts.py    # 提示词模板
 │   │   └── utils.py      # 工具函数
 │   ├── .env              # 环境变量
-│   ├── requirements.txt  # 后端依赖
+│   ├── requirement.txt   # 后端依赖
 │   ├── pyproject.toml    # 项目配置
 │   └── uv.lock           # 依赖锁
 ├── frontend/             # 前端主目录
@@ -75,7 +75,7 @@ venv\Scripts\activate
 ## 3. 后端安装依赖
 ```bash
 运行
-pip install -r requirements.txt
+pip install -r backend/requirement.txt
 ```
 
 ## 4. 前端安装依赖
